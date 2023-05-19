@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title> 
+</head>
+<body>
+    <section>
+        <div class="circle">
+        </div>
+        <header>
+            <a class="imgInfor" href="#"><img class="logo" src="./resource/newicon.webp" alt="icon Picture"></a>
+            <ul>
+                <li><a href="#">主页</a></li>
+                <li><a href="#">饮品</a></li>
+                <li><a href="#">探索新事物</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>这不仅仅是咖啡，<br />这是<span>瑞幸</span>。</h2>
+                <p>以“创造世界级咖啡品牌，让瑞幸成为人们日常生活的一部分”为愿景，围绕“求真务实、品质至上、
+                    持续创新、非我莫属、互信共赢”核心价值观，瑞幸咖啡正在通过产品和服务，努力渗透日常生活每一处，传递美好生活的理念，激发对美好生活的热切期望。
+                    截至2022年6月，瑞幸咖啡全国门店数已突破7000家，结合无人咖啡机“瑞即购”，为顾客提供高品质、高性价比、高便利性的服务。
+                    瑞幸咖啡连续五年在IIAC国际咖啡品鉴大赛斩获金奖，“SOE耶加雪菲”荣获IIAC2021国际咖啡品鉴大赛铂金奖。</p>
+                <a class="inforbtn" href="#">了解更多</a>
+            </div>
+            <div class="imageBox">
+                <a class="imageInfor" href=""><img class="lukin" src="./resource/drink4-removebg-preview (1).png"></a>
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./resource/也云拿铁1.png" onclick="imgslider('./resource/drink4-removebg-preview (1).png');changeColor('#111173')" alt=""></li>
+            <li><img id="special" src="./resource/瑞纳冰.png" onclick="imgslider('./resource/瑞纳冰.png'); changeColor('#27ae60')" alt=""></li>
+            <li><img src="./resource/小黑杯soe.png" onclick="imgslider('./resource/小黑杯soe.png');changeColor('#1e272e')" alt=""></li>
+        </ul>
+        <ul class="icon">
+            <li><a href="#"><img src="./resource/wechat-logo-svgrepo-com.svg" alt="" width="200" height="290"></a></li>
+            <li><a href="#"><img src="./resource/weibo-svgrepo-com.svg" alt="" width="200" height="290"></a></li>
+            <li><a href="#"><img class="bsize" src="./resource/Xiaohongshu logo - Brandlogos.net.svg" alt="" width="200" height="290"></a></li>
+        </ul>
+    </section>
+</body>
+<script type="text/javascript">
+    function imgslider(photo){
+    document.querySelector(".lukin").src = photo;
+    }
+
+    let redirect = document.querySelector(".imageInfor");
+    redirect.addEventListener("click",function(){
+       if(document.querySelector(".circle").style.background=="rbg(39,174,96)"){
+        redirect.href = "https://www.canyin12.com/chanpinjieshao/1010.html";
+       }
+    })
+
+    function changeColor(colors){
+        const circles = document.querySelector(".circle");
+        circles.style.background = colors;
+        if (colors === "#1e272e") {
+    document.querySelector(".lukin").style.height = "600px";
+    document.querySelector(".lukin").style.width = "450px";
+    document.querySelector(".imageBox").style.top = "60px";
+    document.querySelector(".imageBox").style.left = "-5%";
+  } else if (colors === "#27ae60") {
+    document.querySelector(".lukin").style.height = "800px";
+    document.querySelector(".lukin").style.width = "440px";
+    document.querySelector(".imageBox").style.top = "40px";
+    document.querySelector(".imageBox").style.left = "-10%";
+  } else {
+    document.querySelector(".lukin").style.height = "600px";
+    document.querySelector(".lukin").style.width = "380px";
+    document.querySelector(".imageBox").style.top = "20px";
+    document.querySelector(".imageBox").style.left = "-12%";
+  }
+    }
+</script>
+</html>

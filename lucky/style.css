@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  font-family: 'Noto Sans SC', sans-serif;
+  overflow: hidden;
+}
+
+section .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111173;
+  -webkit-clip-path: circle(600px at right 810px);
+          clip-path: circle(600px at right 810px);
+}
+
+section header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 100px;
+  padding-right: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section header .logo {
+  position: relative;
+  max-width: 500px;
+  padding-top: 0;
+  margin-top: 0;
+  width: 75px;
+  height: 75px;
+}
+
+section header ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+}
+
+section header ul li {
+  list-style: none;
+}
+
+section header ul li a {
+  display: inline-block;
+  color: #333;
+  font-weight: 400;
+  margin-left: 60px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+}
+
+section .content {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 590px;
+}
+
+section .content .textBox {
+  position: relative;
+  max-width: 600px;
+  top: 60px;
+  left: 10px;
+}
+
+section .content .textBox h2 {
+  font-size: 3.3rem;
+  color: #333;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 1.5px;
+}
+
+section .content .textBox h2 span {
+  color: #101083;
+  font-weight: 900;
+}
+
+section .content .textBox a {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 40px;
+  background: #1c1ca3;
+  color: whitesmoke;
+  border-radius: 40px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+section .content .textBox a:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+section .content .textBox p {
+  margin-top: 50px;
+  line-height: 28px;
+}
+
+section .imageBox {
+  max-width: 480px;
+  max-height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 20px;
+  left: -12%;
+}
+
+section .imageBox img {
+  height: 600px;
+  width: 380px;
+  border: none;
+  -webkit-animation: animate 3s linear infinite;
+          animation: animate 3s linear infinite;
+}
+
+section .thumb {
+  position: absolute;
+  left: 45%;
+  bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+section .thumb li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+section .thumb li img {
+  height: 100px;
+  width: 70px;
+  -webkit-transform: rotate3d(0.5, 2.5, 0, 190deg);
+          transform: rotate3d(0.5, 2.5, 0, 190deg);
+  -webkit-animation: animate 3s linear infinite;
+          animation: animate 3s linear infinite;
+}
+
+section .thumb li img:hover {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+section .thumb li #special {
+  padding-bottom: 7px;
+  height: 145px;
+  margin-left: 10px;
+}
+
+section .icon {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .icon li {
+  list-style: none;
+}
+
+section .icon li a {
+  display: inline-block;
+  margin: 3px 0;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+section .icon li a img {
+  width: 48px;
+  height: 50px;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translate(-11px, 0);
+            transform: translate(-11px, 0);
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: translate(0px, -11px);
+            transform: translate(0px, -11px);
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: translate(-11px, 0);
+            transform: translate(-11px, 0);
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translate(-11px, 0);
+            transform: translate(-11px, 0);
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: translate(0px, -11px);
+            transform: translate(0px, -11px);
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: translate(-11px, 0);
+            transform: translate(-11px, 0);
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
